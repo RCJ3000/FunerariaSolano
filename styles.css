@@ -99,19 +99,74 @@ body {
 }
 .banner {
     width: 100%;
-    height: 90vh; /* Permite que la imagen mantenga sus proporciones */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 0;
     overflow: hidden;
 }
 
 .banner img {
     width: 100%;
-    height: 100%; /* Ajusta la altura */
-    object-fit: cover; /* Cubre el área sin distorsionar mucho la imagen */
+    height: 500px;
+    display: block;
 }
 
+@media (max-width: 768px) {
+    .container-top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .contactos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .urgencias,
+    .consulta-admin {
+        font-size: 12px;
+        width: 88%;
+    }
+
+    .logo {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .links {
+        padding: 10px 0;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 15px;
+    }
+
+    .menu li {
+        font-size: 11px;
+    }
+    .banner img {
+        height: auto;
+        max-height: 250px;
+        object-fit: cover;
+    }
+}
 
 
 
